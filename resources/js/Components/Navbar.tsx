@@ -8,7 +8,15 @@ const Navbar = () => {
   return (
     <nav className={`${darkMode ? "bg-gray-900 text-white" : "bg-green-600 text-white"} p-4`}>
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <div className="text-2xl font-bold">BPL HMI Cabang Sumenep</div>
+  <div className="flex items-center gap-2">
+    <img 
+      src="/assets/bpl.png" 
+      alt="Logo HMI" 
+      className="w-10 h-10 object-contain"
+    />
+    <span className="text-2xl font-bold">BPL HMI Cabang Sumenep</span>
+  </div>
+
 
         {/* Desktop Links */}
         <div className="hidden md:flex space-x-6 items-center">
@@ -18,9 +26,9 @@ const Navbar = () => {
 
           {/* Dropdown */}
           <div className="relative group">
-            <button className="hover:underline">Services</button>
+            <button className="hover:underline">Modul</button>
             <div className="absolute hidden group-hover:block bg-white text-black mt-2 py-2 rounded shadow-lg">
-              <Link href="/web" className="block px-4 py-2 hover:bg-gray-200">Web Dev</Link>
+              <Link href="/surat" className="block px-4 py-2 hover:bg-gray-200">Template Surat</Link>
               <Link href="/mobile" className="block px-4 py-2 hover:bg-gray-200">Mobile App</Link>
             </div>
           </div>
@@ -47,7 +55,7 @@ const Navbar = () => {
           <Link href="/contact" className="block">Contact</Link>
 
           <div>
-            <button className="w-full text-left">Services</button>
+            <button className="w-full text-left">Modul</button>
             <div className="pl-4 mt-1 space-y-1">
               <Link href="/web" className="block">Web Dev</Link>
               <Link href="/mobile" className="block">Mobile App</Link>
