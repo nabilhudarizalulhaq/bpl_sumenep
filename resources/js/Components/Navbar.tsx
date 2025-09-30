@@ -6,7 +6,7 @@ const Navbar = () => {
   const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <nav className={`${darkMode ? "bg-gray-900 text-white" : "bg-green-600 text-white"} p-4`}>
+    <nav className={`${darkMode ? "fixed top-0 left-0 w-full z-50 bg-gray-900 text-white" : "bg-green-600 text-white"} p-4`}>
       <div className="max-w-7xl mx-auto flex justify-between items-center">
   <div className="flex items-center gap-2">
     <img 
