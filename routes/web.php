@@ -4,6 +4,8 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Auth;
 
 // Halaman utama untuk user biasa (tanpa login)
 Route::get('/', function () {
@@ -18,19 +20,19 @@ Route::middleware(['auth', 'verified'])->group(function () {
         return Inertia::render('Dashboard');
     })->name('dashboard');
 
-    // Middleware khusus super admin
-    // Route::middleware('can:isSuperAdmin')->group(function () {
-    //     Route::get('/admin/super', function () {
-    //         return Inertia::render('SuperAdminDashboard');
-    //     })->name('super.dashboard');
-    // });
+Route::middleware(['auth', 'can:isSuperAdmin'])->group(function () {
+    Route::get('/admin/super', function () {
+        return Inertia::render('SuperAdminDashboard');
+    })->name('super.dashboard');
+});
 
-    // // Middleware admin biasa
-    // Route::middleware('can:isAdmin')->group(function () {
-    //     Route::get('/admin', function () {
-    //         return Inertia::render('AdminDashboard');
-    //     })->name('admin.dashboard');
-    // });
+
+    // Middleware admin biasa
+    Route::middleware('can:isAdmin')->group(function () {
+        Route::get('/admin', function () {
+            return Inertia::render('AdminDashboard');
+        })->name('admin.dashboard');
+    });
 
     // Profile management
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

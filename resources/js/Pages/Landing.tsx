@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Layout from "../Components/LayoutNav";
 import Hero from "../Components/Hero";
+import Footer from "../Components/Footer";
 
 // -- Info cards
 const InfoCards = () => (
@@ -52,82 +53,68 @@ const NewsList = ({ title = "Berita" }) => {
 
 // -- Events
 const Events = () => (
-  <section id="event" className="bg-gray-50 py-12">
-    <div className="container mx-auto px-6">
-      <h3 className="text-2xl font-bold mb-6">Event</h3>
-      <ul className="space-y-4">
-        <li className="p-4 bg-white rounded shadow flex justify-between items-center">
+  <section id="event" className="bg-gray-50 min-h-screen py-12">
+    <div className="w-full px-6">
+      <h3 className="text-2xl font-bold mb-6 text-center">Event</h3>
+
+      {/* Responsive Grid */}
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-5 lg:grid-rows-5 lg:gap-4">
+        {/* Event 5 */}
+        <div className="bg-white rounded-2xl shadow p-6 flex flex-col justify-between hover:shadow-lg transition 
+                      lg:col-span-2 lg:row-span-5">
           <div>
-            <div className="font-semibold">Malam Puncak Dies Natalis HMI 78</div>
-            <div className="text-sm text-gray-500">14 March 2025 • Balai Sudirman</div>
+            <div className="font-semibold text-lg">Malam Puncak Dies Natalis HMI 78</div>
+            <div className="text-sm text-gray-500 mt-1">14 March 2025 • Balai Sudirman</div>
           </div>
-          <div className="text-sm text-green-600">Detail</div>
-        </li>
-      </ul>
+          <div className="text-sm text-green-600 mt-4 text-right cursor-pointer">Detail</div>
+        </div>
+
+        {/* Event 6 */}
+        <div className="bg-white rounded-2xl shadow p-6 flex flex-col justify-between hover:shadow-lg transition 
+                      lg:col-span-2 lg:row-span-4 lg:col-start-3">
+          <div>
+            <div className="font-semibold text-lg">Seminar Nasional Kepemimpinan</div>
+            <div className="text-sm text-gray-500 mt-1">20 March 2025 • UI Depok</div>
+          </div>
+          <div className="text-sm text-green-600 mt-4 text-right cursor-pointer">Detail</div>
+        </div>
+
+        {/* Event 7 */}
+        <div className="bg-white rounded-2xl shadow p-6 flex flex-col justify-between hover:shadow-lg transition 
+                      lg:row-span-4 lg:col-start-5">
+          <div>
+            <div className="font-semibold text-lg">Workshop Digitalisasi UMKM</div>
+            <div className="text-sm text-gray-500 mt-1">25 March 2025 • Gedung Serbaguna</div>
+          </div>
+          <div className="text-sm text-green-600 mt-4 text-right cursor-pointer">Detail</div>
+        </div>
+
+        {/* Event 8 */}
+        <div className="bg-white rounded-2xl shadow p-6 flex flex-col justify-between hover:shadow-lg transition 
+                      lg:col-span-3 lg:col-start-3 lg:row-start-5">
+          <div>
+            <div className="font-semibold text-lg">Rapat Koordinasi Cabang</div>
+            <div className="text-sm text-gray-500 mt-1">28 March 2025 • Sekretariat HMI</div>
+          </div>
+          <div className="text-sm text-green-600 mt-4 text-right cursor-pointer">Detail</div>
+        </div>
+      </div>
     </div>
   </section>
+
 );
 
-// -- Footer
-const Footer = () => (
-  <footer className="bg-gray-900 text-white py-8">
-    <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between">
-      <div>
-        <div className="font-bold">Website Resmi Pengurus Besar</div>
-        <div className="text-sm mt-2">Hotline: 0852 1007 6423</div>
-      </div>
-      <div className="mt-4 md:mt-0 text-sm">
-        © Copyright PB HMI 2024. All rights reserved.
-      </div>
-    </div>
-  </footer>
-);
 
-// -- Landing Page utama
 export default function Landing() {
-
   return (
     <Layout>
-      <Hero />
-      <InfoCards />
-      <NewsList />
-      <Events />
-      <Footer />
+      <div className="pt-16"> {/* tambahkan padding atas supaya Hero tidak ketimpa */}
+        <Hero />
+        <InfoCards />
+        <NewsList />
+        <Events />
+        <Footer />
+      </div>
     </Layout>
   );
 }
-
-
-{/* <section >
-        <div className="relative w-full text-center text-black pt-20">
-          {/* pt-20 = kalau navbar fixed tinggi 80px */}
-      //     <motion.h1
-      //       initial={{ y: -100, opacity: 0 }}
-      //       animate={{ y: 0, opacity: 1 }}
-      //       transition={{ duration: 0.8, ease: "easeOut" }}
-      //       className="text-5xl font-bold mb-6"
-      //     >
-      //       Selamat Datang di Website BPL HMI Cabang Sumenep
-      //     </motion.h1>
-      //   </div>
-      // </section>
-      // <section
-      //   className="relative bg-cover bg-center h-screen py-16 mt-20"
-      //   style={{ backgroundImage: "url('./assets/bg.png')" }}
-      // >
-        {/* Overlay */}
-        // <div className="absolute inset-0 bg-black/40"></div>
-
-
-        // <div className="ml-[22px] mt-8 text-left">
-        //   <div className="inline-block px-6 py-2 rounded-full border-2 border-green-600 bg-green-50 text-green-600">
-        //     <h6 className="text-sm font-semibold">official website</h6>
-        //   </div>
-
-        //   <h1 className="mt-6 text-[60px] !text-white font-black leading-snug drop-shadow-lg">
-        //     Badan Pengelola Latihan <br />
-        //     Himpunan Mahasiswa Islam <br />
-        //     Cabang Sumenep
-        //   </h1>
-        // </div>
-      // </section> */}

@@ -4,7 +4,7 @@ const Hero = () => (
   <section
     id="beranda"
     className="relative bg-no-repeat bg-contain bg-cover h-screen flex items-center"
-    style={{ backgroundImage: "url('/assets/bg_banner.png')" }}
+    style={{ backgroundImage: "url('/assets/bg_bpl.png')" }}
   >
     {/* overlay */}
     <div className="absolute inset-0 bg-black/50"></div>
