@@ -11,11 +11,11 @@ export default defineConfig({
         }),
         react(),
     ],
-    server: {
-        host: '0.0.0.0',   // supaya bisa diakses dari semua IP di jaringan
-        port: 5173,        // default vite port
-        hmr: {
-            host: '192.168.0.101', // IP lokal kamu
-        },
-    },
+    // server: {
+    //     host: '0.0.0.0',   // supaya bisa diakses dari semua IP di jaringan
+    //     port: 5173,        // default vite port
+    //     hmr: {
+    //         host: '192.168.0.101', // IP lokal kamu
+    //     },
+    // },
 });

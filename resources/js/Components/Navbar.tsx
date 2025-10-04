@@ -16,7 +16,7 @@ const Navbar = () => {
         {/* Logo */}
         <div className="flex items-center gap-2">
           <img
-            src="/assets/bpl.png"
+            src="/assets/logo_bpl.png"
             alt="Logo HMI"
             className="w-10 h-10 object-contain"
           />
@@ -28,7 +28,7 @@ const Navbar = () => {
           <Link href="/" className="transition font-medium hover:font-bold">
             Beranda
           </Link>
-          <Link href="/profile" className="transition font-medium hover:font-bold">
+          <Link href="/" className="transition font-medium hover:font-bold">
             Profile
           </Link>
 
@@ -38,12 +38,12 @@ const Navbar = () => {
               <span>Info</span>
               <ChevronDown className="hidden group-hover:inline-block w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
             </button>
-            <div className="absolute left-0 hidden group-hover:flex flex-col bg-green-600 text-white mt-2 py-2 rounded shadow-lg w-40 z-50">
+            <div className="absolute left-0 hidden group-hover:flex flex-col bg-orange-400 text-white mt-2 py-2 rounded shadow-lg w-40 z-50">
               <Link
-                href="/info/artikel"
+                href="/info/event"
                 className="block px-4 py-2 hover:font-bold"
               >
-                Artikel
+                Event
               </Link>
               <Link
                 href="/info/agenda"
@@ -56,6 +56,12 @@ const Navbar = () => {
                 className="block px-4 py-2 hover:font-bold"
               >
                 Kegiatan
+              </Link>
+              <Link
+                href="/info/artikel"
+                className="block px-4 py-2 hover:font-bold"
+              >
+                Artikel
               </Link>
             </div>
           </div>
