@@ -22,4 +22,5 @@
     "resources/js/**/*.d.ts",
     "resources/js/types/**/*.d.ts"
   ]
+
 }
