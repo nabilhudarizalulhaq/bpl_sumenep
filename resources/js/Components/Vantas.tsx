@@ -94,11 +94,11 @@ export default function VantaSection() {
                             className="mt-6 max-w-2xl text-lg leading-relaxed"
                         >
                             Organisasi pengkaderan yang berkontribusi untuk pengembangan potensi
-                            mahasiswa dan keberlanjutan organisasi.
+                            kader dan keberlanjutan organisasi.
                         </motion.p>
                         {/* Button */}
                         <a
-                            href="#vantas"
+                            href="#"
                             className="mt-6 w-[120px] h-[40px] bg-gradient-to-r from-orange-600 via-orange-500 to-orange-400 
              text-white rounded-full hover:from-gray-600 hover:via-gray-700 hover:to-gray-800 
              flex items-center justify-center gap-1 transition-all"

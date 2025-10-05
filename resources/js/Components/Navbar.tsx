@@ -66,6 +66,46 @@ const Navbar = () => {
             </div>
           </div>
 
+          {/* Dropdown Dokumen */}
+          <div className="relative group">
+            <button className="transition font-medium hover:font-bold flex items-center gap-1">
+              <span>Dokumen</span>
+              <ChevronDown className="hidden group-hover:inline-block w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
+            </button>
+            <div className="absolute left-0 hidden group-hover:flex flex-col bg-orange-400 text-white mt-2 py-2 rounded shadow-lg w-40 z-50">
+              <Link
+                href="/dokumen/juknis"
+                className="block px-4 py-2 hover:font-bold"
+              >
+                Juknis LK I
+              </Link>
+              <Link
+                href="/dokumen/modul"
+                className="block px-4 py-2 hover:font-bold"
+              >
+                Modul LK I
+              </Link>
+              <Link
+                href="/dokumen/berkas"
+                className="block px-4 py-2 hover:font-bold"
+              >
+                Berkas
+              </Link>
+              <Link
+                href="/dokumen/konstitusi"
+                className="block px-4 py-2 hover:font-bold"
+              >
+                Konstitusi
+              </Link>
+              <Link
+                href="/dokumen/artikel"
+                className="block px-4 py-2 hover:font-bold"
+              >
+                Loka-karya
+              </Link>
+            </div>
+          </div>
+
           <Link href="/contact" className="transition font-medium hover:font-bold">
             Contact
           </Link>
