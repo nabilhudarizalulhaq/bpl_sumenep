@@ -85,7 +85,7 @@ const Footer = () => {
               <h5 className="font-bold text-lg md:text-2xl mb-3">Kontak</h5>
               <ul className="space-y-1 md:space-y-2 text-sm md:text-lg">
                 <li><a href="/kontak" className="hover:text-orange-300 transition">Hubungi Kami</a></li>
-                <li><a href="/upload-berkas" className="hover:text-orange-300 transition">Upload Berkas (Proposal Kegiatan)</a></li>
+                <li><a href="/upload-berkas" className="hover:text-orange-300 transition">Upload Berkas Training</a></li>
                 <li><a href="/upload-undangan" className="hover:text-orange-300 transition">Upload Undangan</a></li>
               </ul>
             </div>
