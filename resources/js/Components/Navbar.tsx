@@ -58,6 +58,12 @@ const Navbar = () => {
                 Kegiatan
               </Link>
               <Link
+                href="/info/berita"
+                className="block px-4 py-2 hover:font-bold"
+              >
+                Berita
+              </Link>
+              <Link
                 href="/info/artikel"
                 className="block px-4 py-2 hover:font-bold"
               >
@@ -119,7 +125,7 @@ const Navbar = () => {
         {/* Mobile menu button */}
         <div className="md:hidden">
           <button onClick={() => setIsOpen(!isOpen)}>
-            {isOpen ? "✖️" : "☰"}
+            {isOpen ? "x" : "☰"}
           </button>
         </div>
       </div>
@@ -142,14 +148,35 @@ const Navbar = () => {
           <details className="w-full">
             <summary className="cursor-pointer hover:font-bold">Info</summary>
             <div className="pl-4 mt-1 space-y-1">
-              <Link href="/info/artikel" className="block hover:font-bold">
-                Artikel
+              <Link
+                href="/info/event"
+                className="block px-4 py-2 hover:font-bold"
+              >
+                Event
               </Link>
-              <Link href="/info/agenda" className="block hover:font-bold">
+              <Link
+                href="/info/agenda"
+                className="block px-4 py-2 hover:font-bold"
+              >
                 Agenda
               </Link>
-              <Link href="/info/kegiatan" className="block hover:font-bold">
+              <Link
+                href="/info/kegiatan"
+                className="block px-4 py-2 hover:font-bold"
+              >
                 Kegiatan
+              </Link>
+              <Link
+                href="/info/berita"
+                className="block px-4 py-2 hover:font-bold"
+              >
+                Berita
+              </Link>
+              <Link
+                href="/info/artikel"
+                className="block px-4 py-2 hover:font-bold"
+              >
+                Artikel
               </Link>
             </div>
           </details>
