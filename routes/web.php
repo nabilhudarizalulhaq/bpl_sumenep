@@ -11,6 +11,9 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', function () {
         return Inertia::render('Landing');
 });
+Route::get('/galeri', function () {
+    return Inertia::render('GaleriPage');
+})->name('galeri');
 
 // Dashboard khusus admin (harus login)
 Route::middleware(['auth', 'verified'])->group(function () {

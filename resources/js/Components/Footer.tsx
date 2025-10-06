@@ -1,5 +1,6 @@
-import React from "react";
 import { FaInstagram, FaFacebookF, FaYoutube } from "react-icons/fa";
+import { Link } from '@inertiajs/react';
+
 
 const Footer = () => {
   return (
@@ -60,11 +61,31 @@ const Footer = () => {
             <div className="min-w-[150px]">
               <h5 className="font-bold text-lg md:text-2xl mb-3">Useful Link</h5>
               <ul className="space-y-1 md:space-y-2 text-sm md:text-lg">
-                <li><a href="/sejarah" className="hover:text-orange-300 transition">Sejarah</a></li>
-                <li><a href="/profil" className="hover:text-orange-300 transition">Profil</a></li>
-                <li><a href="/program-kerja" className="hover:text-orange-300 transition">Program Kerja</a></li>
-                <li><a href="/struktur-pengurus" className="hover:text-orange-300 transition">Struktur Pengurus</a></li>
-                <li><a href="/galeri" className="hover:text-orange-300 transition">Galeri</a></li>
+                <li>
+                  <Link href="/sejarah" className="hover:text-orange-300 transition">
+                    Sejarah
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/profil" className="hover:text-orange-300 transition">
+                    Profil
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/program-kerja" className="hover:text-orange-300 transition">
+                    Program Kerja
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/struktur-pengurus" className="hover:text-orange-300 transition">
+                    Struktur Pengurus
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/galeri" className="hover:text-orange-300 transition">
+                    Galeri
+                  </Link>
+                </li>
               </ul>
             </div>
 
