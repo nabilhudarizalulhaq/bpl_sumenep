@@ -1,35 +1,12 @@
-import React from "react";
+
 import Layout from "../Components/LayoutNav";
 import Hero from "../Components/Hero";
+import InfoCards from "@/Components/Infocard";
 import Footer from "../Components/Footer";
 import VantaSection from "@/Components/Vantas";
 import CounterSection from "@/Components/CounterSection";
 
-// -- Info cards
-const InfoCards = () => (
-  <section className="w-full py-16 bg-gray-50">
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-6 md:px-12 lg:px-20">
-      <div className="p-6 bg-white rounded-lg shadow">
-        <h5 className="text-lg font-semibold">Who we are</h5>
-        <p className="mt-2 text-sm">
-          Ringkasan sejarah & visi HMI (ganti dengan teks asli).
-        </p>
-      </div>
-      <div className="p-6 bg-white rounded-lg shadow">
-        <h5 className="text-lg font-semibold">Aktivitas</h5>
-        <p className="mt-2 text-sm">
-          Info kegiatan, statistik cabang & kader.
-        </p>
-      </div>
-      <div className="p-6 bg-white rounded-lg shadow">
-        <h5 className="text-lg font-semibold">Kontak Pengaduan</h5>
-        <p className="mt-2 text-sm">
-          Hotline / Whatsapp / form kontak.
-        </p>
-      </div>
-    </div>
-  </section>
-);
+
 
 // -- News
 const NewsList = ({ title = "Berita" }) => {
@@ -72,11 +49,11 @@ const NewsList = ({ title = "Berita" }) => {
 
 // -- Events
 const Events = () => (
-  <section id="event" className="w-full py-16 bg-gray-50">
+  <section id="event" className="w-full py-16 bg-green-100">
     <div className="px-6 md:px-12 lg:px-20">
       <h3 className="text-2xl font-bold mb-6">Event</h3>
 
-      <div className="grid grid-cols-1 gap-6 lg:grid-cols-5 lg:grid-rows-5 lg:gap-4">
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-5 lg:gap-4">
         {/* Event 10 */}
         <div className="bg-white rounded-2xl shadow p-6 flex flex-col justify-between hover:shadow-lg transition 
                         lg:col-span-2 lg:row-span-3">
@@ -124,7 +101,7 @@ const Events = () => (
 export default function Landing() {
   return (
     <Layout>
-      <div className="scroll-smooth pt-12 w-full bg-green">
+      <div className="scroll-smooth pt-12 w-full bg-green min-h-screen flex flex-col items-center">
         <div className="w-full px-0"> 
           <Hero />
           <VantaSection />
