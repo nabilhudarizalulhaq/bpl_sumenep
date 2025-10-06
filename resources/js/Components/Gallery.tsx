@@ -28,28 +28,35 @@ const Gallery: React.FC = () => {
           Galeri Kegiatan
         </h2>
         <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto">
-          Dokumentasi berbagai kegiatan <span className="font-semibold">Badan Pengelola Latihan HMI Cabang Sumenep</span> 
-          — bentuk nyata kontribusi dan semangat kader.
+          Dokumentasi berbagai kegiatan{" "}
+          <span className="font-semibold">
+            Badan Pengelola Latihan HMI Cabang Sumenep
+          </span>{" "}
+          bentuk nyata kontribusi dan semangat kader.
         </p>
       </div>
 
       {/* Masonry Grid */}
-      <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 space-y-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {images.map((img, idx) => (
           <div
             key={idx}
+            className="cursor-pointer group"
             onClick={() => setSelected(img)}
-            className="relative overflow-hidden rounded-2xl cursor-pointer group shadow-md hover:shadow-xl transition-shadow"
           >
-            <img
-              src={img.src}
-              alt={img.title}
-              className="w-full rounded-2xl transition-transform duration-500 group-hover:scale-110"
-              loading="lazy"
-            />
-            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-center px-4">
-              <p className="text-base md:text-lg font-semibold">{img.title}</p>
+            {/* Gambar */}
+            <div className="relative overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-shadow">
+              <img
+                src={img.src}
+                alt={img.title}
+                className="w-full rounded-2xl transition-transform duration-500 group-hover:scale-110"
+                loading="lazy"
+              />
             </div>
+            {/* Keterangan di bawah gambar */}
+            <p className="mt-2 text-center text-gray-700 font-medium">
+              {img.title}
+            </p>
           </div>
         ))}
       </div>

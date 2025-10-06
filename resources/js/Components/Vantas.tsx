@@ -29,7 +29,7 @@ export default function VantaSection() {
         backgroundColor: 0x22b658,
         points: 20.0,
           spacing: 17.0,
-        lineMaterial: { vertexColors: false },
+        vertexColors: false,
       });
     }
 
