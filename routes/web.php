@@ -14,6 +14,9 @@ Route::get('/', function () {
 Route::get('/galeri', function () {
     return Inertia::render('GaleriPage');
 })->name('galeri');
+Route::get('/dokumen', function () {
+    return Inertia::render('DocumentPage');
+});
 
 // Dashboard khusus admin (harus login)
 Route::middleware(['auth', 'verified'])->group(function () {

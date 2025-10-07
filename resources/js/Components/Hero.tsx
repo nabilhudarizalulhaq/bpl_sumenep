@@ -6,7 +6,7 @@ const Hero = () => (
     id="beranda"
     className="relative w-full bg-no-repeat bg-cover h-screen flex items-center overflow-hidden
 "
-    style={{ backgroundImage: "url('/assets/bg_bpl.png')" }}
+    style={{ backgroundImage: "url('/assets/bg_bpl_.png')" }}
   >
     {/* Overlay */}
     <div className="absolute inset-0 bg-black/50"></div>

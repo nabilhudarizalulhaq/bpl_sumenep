@@ -93,7 +93,11 @@ const Footer = () => {
             <div className="min-w-[150px]">
               <h5 className="font-bold text-lg md:text-2xl mb-3">Info</h5>
               <ul className="space-y-1 md:space-y-2 text-sm md:text-lg">
-                <li><a href="/dokumen" className="hover:text-orange-300 transition">Dokumen</a></li>
+                <li>
+                  <Link href="/dokumen" className="hover:text-orange-300 transition">
+                    Dokumen
+                  </Link>
+                </li>
                 <li><a href="/berita" className="hover:text-orange-300 transition">Berita</a></li>
                 <li><a href="/event" className="hover:text-orange-300 transition">Event</a></li>
                 <li><a href="/opini" className="hover:text-orange-300 transition">Opini</a></li>
