@@ -21,9 +21,12 @@ const Gallery: React.FC = () => {
   const [selected, setSelected] = useState<Image | null>(null);
 
   return (
-    <section className="bg-gradient-to-b from-white to-green-50 py-16 px-6 md:px-10">
+    <section className="bg-gradient-to-b mt-30from-white to-green-50 py-16 px-6 md:px-10">
       {/* Header Section */}
-      <div className="text-center mb-12">
+      <div className="text-center mt-16 mb-12">
+        <h6 className="inline-block px-5 py-2 rounded-full bg-transparent text-black border-2 border-green-400 font-medium mb-4">
+          Galeri
+        </h6>
         <h2 className="text-3xl md:text-5xl font-extrabold text-green-700 mb-4">
           Galeri Kegiatan
         </h2>
