@@ -4,15 +4,15 @@ import { useState } from "react";
 import { Link } from "@inertiajs/react";
 import { ChevronDown } from "lucide-react";
 
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${
-        darkMode ? "bg-gray-900 text-white" : "bg-green-600 text-white"
-      } p-4`}
+      className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${darkMode ? "bg-gray-900 text-white" : "bg-green-600 text-white"
+        } p-4`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Logo */}
@@ -59,12 +59,19 @@ const Navbar = () => {
               >
                 Kegiatan
               </Link>
-              <Link
-                href="/info/berita"
-                className="block px-4 py-2 hover:font-bold"
-              >
-                Berita
-              </Link>
+              {/* Example: Map over berita items if available */}
+              {/* {berita.map((item) => (
+                <Link
+                  key={item.id}
+                  href={`/info/berita/${item.id}`}
+                  className="block px-4 py-2 hover:font-bold"
+                >
+                  {item.title}
+                </Link>
+              ))} */}
+
+              {/* Or remove if not needed */}
+
               <Link
                 href="/info/artikel"
                 className="block px-4 py-2 hover:font-bold"
@@ -135,9 +142,8 @@ const Navbar = () => {
       {/* Mobile Links */}
       {isOpen && (
         <div
-          className={`${
-            darkMode ? "bg-gray-900 text-white" : "bg-green-600 text-white"
-          } md:hidden mt-2 space-y-2 p-2 rounded-lg`}
+          className={`${darkMode ? "bg-gray-900 text-white" : "bg-green-600 text-white"
+            } md:hidden mt-2 space-y-2 p-2 rounded-lg`}
         >
           <Link href="/" className="block hover:font-bold">
             Beranda

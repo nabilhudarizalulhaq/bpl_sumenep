@@ -4,7 +4,7 @@ import Hero from "../Components/Hero";
 import VantaSection from "@/Components/Vantas";
 import CounterSection from "@/Components/CounterSection";
 import InfoCards from "@/Components/Infocard";
-import NewsList from "@/Components/News";
+import NewsList from "@/Components/Newslist";
 import Events from "@/Components/Event";
 import Footer from "../Components/Footer";
 

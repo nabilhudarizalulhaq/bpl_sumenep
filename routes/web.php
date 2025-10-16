@@ -7,6 +7,7 @@ use Inertia\Inertia;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Auth;
 
+
 // Halaman utama untuk user biasa (tanpa login)
 Route::get('/', function () {
         return Inertia::render('Landing');
@@ -17,6 +18,13 @@ Route::get('/galeri', function () {
 Route::get('/dokumen', function () {
     return Inertia::render('DocumentPage');
 });
+Route::get('/berita', function () {
+    return Inertia::render('NewsList');
+})->name('berita.list');
+
+Route::get('/berita/{id}', function ($id) {
+    return Inertia::render('NewsDetail', ['id' => $id]);
+})->name('berita.detail');
 
 // Dashboard khusus admin (harus login)
 Route::middleware(['auth', 'verified'])->group(function () {
