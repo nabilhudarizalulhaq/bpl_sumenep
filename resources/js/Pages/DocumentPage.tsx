@@ -40,7 +40,7 @@ export default function Dokumen() {
             link: 'https://mega.nz/file/niwkzZBD#b4iUdETPpUSde39Ca00e9GbyKCFpr40Q6edGGcKmOMo',
         },
         {
-            title: 'Logo Organisasi',
+            title: 'Logo BPL',
             icon: <FaShieldAlt size={40} />,
             link: 'https://mega.nz/folder/TzxBVT6B#Ty-fXAP5S0ZVBPFO7Mtd4g',
         },
